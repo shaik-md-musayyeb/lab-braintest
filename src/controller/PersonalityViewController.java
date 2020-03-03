@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import service.PersonalityCalculator;
+
 
 // Do not edit or modify this class unless required.
 // This file acts as a controller class
@@ -43,8 +45,9 @@ public class PersonalityViewController extends HttpServlet {
 		// The value returned from the method is of type string.
 		// Store the String returned in a string literal called as message
 				
-		/* Un the below lines to test your code l
-
+		/* Un the below lines to test your code l*/
+		PersonalityCalculator pc = new PersonalityCalculator();
+		String message = pc.findYourBrainType(options);
 		request.setAttribute("message", message);
 		
 		if(message!=null)
@@ -62,7 +65,7 @@ public class PersonalityViewController extends HttpServlet {
 				rd.forward(request, response);
 			}
 		
-		}*/
+		}
 		}
 	}
 
